@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#741976D2"
+    android:paddingLeft="5dp"
+    android:paddingTop="2dp"
+    android:paddingRight="5dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#CFA3B4"
+            android:gravity="center|top"
+            android:text="  BMI calculator "
+            android:textColor="#1A237E"
+            android:textSize="34sp"
+            tools:layout_editor_absoluteX="84dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:paddingTop="10dp"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="61dp">
+
+            <TextView
+                android:id="@+id/gender"
+                android:layout_width="147dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:background="#FD78AC"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:text="height"
+                android:textAllCaps="false"
+                android:textColor="#5E35B1"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/h"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:background="#80FDFBFD"
+                android:ems="10"
+                android:hint="CM"
+                android:inputType="number"
+                android:paddingLeft="5dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp">
+
+            <TextView
+                android:id="@+id/age"
+                android:layout_width="68dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#FD78AC"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:text="weight"
+                android:textColor="#5E35B1"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/w"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#80FDFBFD"
+
+                android:ellipsize="middle"
+                android:ems="10"
+                android:hint="@string/Age"
+                android:inputType="number"
+                android:textSize="20dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="241dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/ShowError"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#E1C4C4"
+                android:text="submut"
+                android:textColor="#6200EA"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/BMIresult"
+                android:layout_width="match_parent"
+                android:layout_height="51dp"
+                android:background="#AA87B8"
+                android:hint="result"
+                android:inputType="text"
+                android:scrollHorizontally="false"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="170dp"
+                android:layout_height="149dp"
+                android:layout_gravity="center_horizontal"
+                app:srcCompat="@drawable/p" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Try on your own using Weight = 30, Height = 130"
+                android:textColor="#FBFAFA"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:paddingTop="5dp">
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#FD78AC"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:paddingTop="5dp"
+                android:text="BMI = weight (kg) / height^2 (m^2)"
+                android:textColor="#6D4C41"
+                android:textSize="24sp"
+                android:textStyle="bold|italic" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="59dp"
+            android:orientation="horizontal"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:id="@+id/weigh"
+                android:layout_width="85dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#FD78AC"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:paddingTop="5dp"
+                android:text="Select BMI"
+                android:textColor="#5E35B1"
+                android:textColorLink="#FFFFFF"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="167dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#80FDFBFD"
+                android:spinnerMode="dropdown"
+                android:contentDescription="select your wight "
+                android:scrollbarSize="20dp" />
+
+            <TextView
+                android:id="@android:id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:autoSizeMaxTextSize="20dp"
+                android:autoSizeMinTextSize="5dp"
+                android:background="@color/teal_200"
+                android:backgroundTint="#D8739B"
+                android:gravity="center_vertical"
+                android:textColor="@android:color/black"
+                android:textColorHighlight="@color/purple_200"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/resF"
+            android:layout_width="match_parent"
+            android:layout_height="63dp"
+            android:background="#EAD2D2"
+            android:fontFamily="serif"
+            android:gravity="center"
+            android:hint="Category"
+            android:textSize="20sp" />
+<!--        <Button-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="print Data from Shared "-->
+<!--            android:layout_marginTop="1dp"-->
+<!--            android:id="@+id/print"-->
+
+<!--            />-->
+
+
+<!--        <TextView-->
+<!--            android:id="@+id/printedData"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:gravity="center"-->
+<!--            android:padding="1dp"-->
+<!--            android:textColor="#000000"-->
+<!--            android:textSize="20sp" />-->
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="INFORMATIONS"
+            android:layout_marginTop="10dp"
+            android:id="@+id/next"
+
+            />
+
+
+    </LinearLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
